@@ -396,7 +396,7 @@ export interface ApiCategoryProductCategoryProduct
       'api::category-product.category-product'
     > &
       Schema.Attribute.Private;
-    mainimage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    mainimage: Schema.Attribute.Media<'images' | 'files'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'categoryName'>;
     updatedAt: Schema.Attribute.DateTime;
