@@ -4,28 +4,31 @@
   "info": {
     "singularName": "category-product",
     "pluralName": "category-products",
-    "displayName": "categoryProduct"
+    "displayName": "categoryProduct",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "categoryName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
       "targetField": "categoryName"
     },
     "mainimage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

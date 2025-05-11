@@ -377,6 +377,7 @@ export interface ApiCategoryProductCategoryProduct
   extends Struct.CollectionTypeSchema {
   collectionName: 'category_products';
   info: {
+    description: '';
     displayName: 'categoryProduct';
     pluralName: 'category-products';
     singularName: 'category-product';
@@ -385,7 +386,7 @@ export interface ApiCategoryProductCategoryProduct
     draftAndPublish: true;
   };
   attributes: {
-    categoryName: Schema.Attribute.String;
+    categoryName: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
